@@ -14,7 +14,7 @@ export default function ContactPage() {
   return (
     <>
       <section className="bg-cream py-16">
-        <div className="container grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+        <div className="container grid items-start gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <SectionIntro
               eyebrow="Contact"
@@ -62,11 +62,11 @@ export default function ContactPage() {
               Request Service
             </Button>
           </div>
-          <div className="overflow-hidden rounded-md border border-grove-100 bg-white shadow-soft">
+          <div className="self-start overflow-hidden rounded-md border border-grove-100 bg-white shadow-soft">
             <iframe
               title="Map showing Grove Plumbing service location in Delta, BC"
               src="https://www.google.com/maps?q=Grove%20Plumbing%20Delta%20BC&output=embed"
-              className="h-[350px] w-full border-0 md:h-[420px]"
+              className="h-[320px] w-full border-0 md:h-[360px]"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />

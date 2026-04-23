@@ -130,6 +130,9 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+          <p className="mt-2 text-center text-sm text-slate-600">
+            ★ 4.9 Google rating from local homeowners
+          </p>
         </div>
       </section>
 
