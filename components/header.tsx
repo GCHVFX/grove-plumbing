@@ -57,12 +57,14 @@ export function Header() {
         <div className="hidden items-center gap-3 lg:flex">
           <a
             href={`tel:${phoneNumber.replace(/\D/g, "")}`}
-            className="focus-ring inline-flex items-center gap-2 rounded-md text-sm font-bold text-pipe"
+            className="focus-ring inline-flex items-center gap-2 rounded-md border border-grove-100 bg-white px-3 py-2 text-sm font-black text-pipe shadow-sm"
           >
             <Phone className="h-4 w-4 text-grove-700" />
             {phoneNumber}
           </a>
-          <Button href="/book-service">Request Service</Button>
+          <Button href="/book-service" className="px-6 py-3.5">
+            Request Service
+          </Button>
         </div>
 
         <button

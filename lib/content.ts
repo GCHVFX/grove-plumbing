@@ -29,7 +29,7 @@ export const services = [
     shortTitle: "Plumbing",
     icon: Wrench,
     summary:
-      "Reliable repairs, replacements, and fixture installations for South Delta homes.",
+      "Leaking taps, running toilets, and fixture replacements handled cleanly and quickly.",
     intro:
       "From a dripping tap to a larger plumbing repair, Grove helps homeowners get practical fixes without the runaround.",
     problems: [
@@ -51,7 +51,7 @@ export const services = [
     shortTitle: "Drains",
     icon: Droplets,
     summary:
-      "Help for slow drains, clogs, backups, and recurring drainage issues.",
+      "Slow drains, kitchen clogs, and recurring backups cleared with practical next steps.",
     intro:
       "Slow drains and backups can turn stressful quickly. Grove clears the issue and helps you understand what caused it.",
     problems: [
@@ -73,7 +73,7 @@ export const services = [
     shortTitle: "Water Heaters",
     icon: Heater,
     summary:
-      "Repair, replacement, and installation support when hot water becomes unreliable.",
+      "No hot water, leaking tanks, and replacement installs for reliable hot water again.",
     intro:
       "Whether you have no hot water or an aging tank, Grove can help you choose the right next step for your home.",
     problems: [
@@ -95,7 +95,7 @@ export const services = [
     shortTitle: "Heating",
     icon: Home,
     summary:
-      "Home heating support, repairs, and maintenance for dependable comfort.",
+      "Cold rooms, noisy systems, and heating repairs to keep your home comfortable.",
     intro:
       "Grove brings practical heating support for homeowners who want clear answers and steady service.",
     problems: [
@@ -117,7 +117,7 @@ export const services = [
     shortTitle: "Gas Fitting",
     icon: Flame,
     summary:
-      "Licensed gas line and appliance connection work handled with care.",
+      "Licensed gas line installs, appliance hookups, and safety checks for home upgrades.",
     intro:
       "Gas work needs proper experience and attention. Grove supports safe, licensed gas fitting for local homeowners.",
     problems: [
@@ -139,7 +139,7 @@ export const services = [
     shortTitle: "Emergency",
     icon: PhoneCall,
     summary:
-      "Urgent help for leaks, bursts, backups, and no-hot-water situations.",
+      "Urgent leaks, backups, and no-hot-water calls with fast local response.",
     intro:
       "When plumbing problems cannot wait, Grove makes it easy to call and request urgent help.",
     problems: [
@@ -186,19 +186,19 @@ export const testimonials = [
     name: "Sarah M.",
     location: "Ladner",
     quote:
-      "Grove sorted out a leaking shutoff and explained exactly what was going on. The work was clean, quick, and easy to understand."
+      "A leaking shutoff under our kitchen sink was soaking the cabinet. Grove fixed it the same afternoon and everything has stayed dry since."
   },
   {
     name: "Rob T.",
     location: "Tsawwassen",
     quote:
-      "We had a slow kitchen drain that kept coming back. They cleared it properly and gave us useful advice instead of a sales pitch."
+      "Our kitchen drain kept clogging every few weeks. They cleared the blockage properly, explained what caused it, and it has drained normally ever since."
   },
   {
     name: "Jennifer L.",
     location: "North Delta",
     quote:
-      "Our water heater quit on a busy week. Grove helped us understand the options and got the replacement handled professionally."
+      "We had no hot water two days before family arrived. Grove walked us through options and replaced the tank quickly, so we were back to normal by the next evening."
   }
 ];
 

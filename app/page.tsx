@@ -11,8 +11,7 @@ import {
   homeFaqs,
   phoneNumber,
   services,
-  serviceAreas,
-  whyGrove
+  serviceAreas
 } from "@/lib/content";
 
 export default function HomePage() {
@@ -76,6 +75,10 @@ export default function HomePage() {
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </div>
+            <p className="mt-3 text-sm leading-6 text-slate-600">
+              Same-day service available for most calls. We&rsquo;ll confirm your
+              time quickly.
+            </p>
             <div className="mt-4 flex flex-wrap gap-3">
               <span className="rounded-md bg-white px-3 py-2 text-sm font-bold text-pipe shadow-sm">
                 Licensed & insured •
@@ -119,17 +122,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-y border-grove-100 bg-white py-6">
+      <section className="border-y border-grove-100 bg-white py-4">
         <div className="container">
-          <p className="rounded-md border border-grove-100 bg-cream px-4 py-4 text-center font-bold text-pipe">
-            Local service you can rely on. Clear communication and
-            straightforward work from start to finish.
-          </p>
+          <div className="flex flex-wrap items-center justify-center gap-2 text-sm font-semibold text-pipe md:gap-4">
+            {[
+              "15+ years experience",
+              "100+ local jobs completed",
+              "Fully licensed & insured"
+            ].map((item, index, list) => (
+              <div key={item} className="inline-flex items-center gap-2 md:gap-4">
+                <span>{item}</span>
+                {index < list.length - 1 ? (
+                  <span aria-hidden="true" className="text-grove-300">
+                    •
+                  </span>
+                ) : null}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="mt-8 mb-10 md:mt-12 md:mb-16">
         <div className="container">
+          <p className="mb-3 text-sm font-semibold text-slate-600">
+            Real work, real homes across South Delta.
+          </p>
           <div
             className="overflow-hidden rounded-[16px] border border-grove-100 bg-white"
             style={{ boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}
@@ -170,20 +188,27 @@ export default function HomePage() {
         <div className="container grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
           <SectionIntro
             eyebrow="Why Grove"
-            title="Why Homeowners Choose Grove Plumbing"
-            body="We keep things simple. Show up when we say we will, explain the work clearly, and get it done properly."
+            title="Why Homeowners Call Grove Plumbing"
           />
-          <div className="grid gap-4">
-            {whyGrove.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-md border border-grove-100 bg-cream p-6 md:p-7"
+          <ul className="grid gap-3 rounded-md border border-grove-100 bg-cream p-6 md:p-7">
+            {[
+              "Shows up when scheduled",
+              "Clear recommendations before work starts",
+              "Clean, respectful work in your home",
+              "No pressure, no upselling"
+            ].map((point) => (
+              <li
+                key={point}
+                className="flex items-start gap-3 leading-7 text-slate-700"
               >
-                <h3 className="text-xl font-black text-pipe">{item.title}</h3>
-                <p className="mt-2 leading-7 text-slate-700">{item.body}</p>
-              </div>
+                <span
+                  aria-hidden="true"
+                  className="mt-[0.65rem] h-2 w-2 shrink-0 rounded-full bg-grove-700"
+                />
+                <span className="font-semibold text-pipe">{point}</span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
@@ -251,6 +276,9 @@ export default function HomePage() {
             </p>
           </div>
           <BookingFlow />
+          <p className="text-sm leading-6 text-grove-100 lg:col-start-2">
+            We&rsquo;ll follow up to confirm everything before your appointment.
+          </p>
         </div>
       </section>
 
@@ -300,8 +328,8 @@ export default function HomePage() {
       </section>
 
       <CtaBand
-        title="Need Help With a Plumbing, Heating, or Gas Issue?"
-        body="Get in touch or request service online. We&rsquo;ll follow up to confirm the details and get you booked in."
+        title="Need Plumbing, Heating, or Gas Help?"
+        body="Tell us what&rsquo;s going on and we&rsquo;ll get back to you quickly to confirm the details."
       />
     </>
   );
