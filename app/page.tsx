@@ -1,4 +1,4 @@
-import { ArrowRight, CalendarCheck, MapPin } from "lucide-react";
+import { CalendarCheck, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { BookingFlow } from "@/components/booking-flow";
@@ -61,38 +61,28 @@ export default function HomePage() {
               Plumbing, Heating & Gas Done Right
             </h1>
             <p className="mt-3 max-w-2xl text-lg leading-8 text-slate-700">
-              Serving Ladner, Tsawwassen, and North Delta with dependable
-              plumbing, heating, gas, and drain services. Request service
-              online and we&rsquo;ll confirm a time that works for you.
+              Local, family-run service for homes in Ladner, Tsawwassen, and
+              North Delta. If something isn&rsquo;t working the way it should,
+              we&rsquo;ll get it sorted.
             </p>
             <div className="mt-5 flex flex-col gap-3 sm:flex-row">
               <Button href="/book-service">
                 <CalendarCheck className="h-4 w-4" />
                 Request Service
               </Button>
-              <Button href="/services" variant="secondary">
-                View Services
-                <ArrowRight className="h-4 w-4" />
+              <Button href={`tel:${phoneNumber.replace(/\D/g, "")}`} variant="secondary">
+                <Phone className="h-4 w-4" />
+                Call Now
               </Button>
             </div>
             <p className="mt-3 text-sm leading-6 text-slate-600">
               Same-day service available for most calls. We&rsquo;ll confirm your
               time quickly.
             </p>
-            <div className="mt-4 flex flex-wrap gap-3">
-              <span className="rounded-md bg-white px-3 py-2 text-sm font-bold text-pipe shadow-sm">
-                Licensed & insured •
-              </span>
-              <span className="rounded-md bg-white px-3 py-2 text-sm font-bold text-pipe shadow-sm">
-                Red Seal certified •
-              </span>
-              <a
-                href={`tel:${phoneNumber.replace(/\D/g, "")}`}
-                className="focus-ring rounded-md bg-white px-3 py-2 text-sm font-bold text-pipe shadow-sm"
-              >
-                Local, reliable service
-              </a>
-            </div>
+            <p className="mt-4 text-sm font-bold text-pipe">
+              Licensed & insured &bull; Red Seal certified &bull; Local, reliable
+              service
+            </p>
           </div>
           <div className="grid gap-4">
             <div className="relative overflow-hidden rounded-md border border-grove-100 bg-white shadow-soft">
@@ -134,7 +124,7 @@ export default function HomePage() {
                 <span>{item}</span>
                 {index < list.length - 1 ? (
                   <span aria-hidden="true" className="text-grove-300">
-                    •
+                    &bull;
                   </span>
                 ) : null}
               </div>
@@ -144,6 +134,47 @@ export default function HomePage() {
       </section>
 
       <section className="mt-8 mb-10 md:mt-12 md:mb-16">
+        <div className="container grid items-start gap-8 md:grid-cols-[1.05fr_0.95fr]">
+          <div>
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.14em] text-grove-700">
+              About Grove
+            </p>
+            <h2 className="text-3xl font-bold leading-tight text-pipe md:text-4xl">
+              South Delta roots. Straightforward work.
+            </h2>
+            <p className="mt-4 leading-7 text-slate-700">
+              Born and raised in South Delta, David Mueller started Grove
+              Plumbing &amp; Heating to serve homeowners right here in the
+              community.
+            </p>
+            <p className="mt-3 leading-7 text-slate-700">
+              Grove is a family-run business built on doing the job properly,
+              treating people fairly, and being the kind of company people feel
+              comfortable calling again.
+            </p>
+            <p className="mt-4 text-sm font-semibold leading-7 text-slate-700 md:text-base">
+              We keep things simple, show up when we say we will, and take pride
+              in doing the work properly.
+            </p>
+            <Button href="/about" variant="secondary" className="mt-5">
+              Learn more about Grove
+            </Button>
+          </div>
+          <div className="overflow-hidden rounded-[16px] border border-grove-100 bg-white shadow-soft">
+            <div className="relative aspect-[4/3]">
+              <Image
+                src="/tsawwassen-view.jpg"
+                alt="View of Tsawwassen in South Delta"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 768px) 100vw, 45vw"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mb-10 md:mb-16">
         <div className="container">
           <p className="mb-3 text-sm font-semibold text-slate-600">
             Real work, real homes across South Delta.
@@ -155,7 +186,7 @@ export default function HomePage() {
             <div className="relative h-[200px] md:h-[300px]">
               <Image
                 src="/two-old-taps.jpg"
-                alt="Residential plumbing fixture taps in a home"
+                alt="Residential plumbing fixture taps in a South Delta home"
                 fill
                 className="object-cover object-center"
                 sizes="100vw"
@@ -170,10 +201,12 @@ export default function HomePage() {
           <SectionIntro
             eyebrow="Services"
             title="Plumbing, Heating & Gas Services for Your Home"
-            body="From small repairs to larger jobs, we handle the work homeowners deal with every day. If something isn&rsquo;t working the way it should, we&rsquo;ll get it sorted."
+            body="From small repairs to bigger jobs, we handle the kind of work homeowners deal with every day. If something&rsquo;s leaking, clogged, or not working properly, we&rsquo;ll take care of it."
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
+            {services
+              .filter((service) => service.slug !== "emergency-plumbing")
+              .map((service) => (
               <ServiceCard
                 key={service.slug}
                 service={service}
@@ -217,7 +250,7 @@ export default function HomePage() {
           <SectionIntro
             eyebrow="Recent work"
             title="Recent Work Around South Delta"
-            body="A look at the kind of work we do for homeowners in Ladner, Tsawwassen, and North Delta."
+            body="A look at the kind of work we do in Ladner, Tsawwassen, and North Delta homes."
           />
           <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {[
@@ -270,14 +303,10 @@ export default function HomePage() {
               Tell us what you need, choose a preferred time, and we&rsquo;ll get
               back to you quickly to confirm the details.
             </p>
-            <p className="mt-3 text-sm leading-6 text-grove-100">
-              For urgent issues, call us directly and we will do our best to
-              help right away.
-            </p>
           </div>
           <BookingFlow />
           <p className="text-sm leading-6 text-grove-100 lg:col-start-2">
-            We&rsquo;ll follow up to confirm everything before your appointment.
+            You&rsquo;ll be dealing directly with a local plumber, not a call centre.
           </p>
         </div>
       </section>
@@ -287,7 +316,7 @@ export default function HomePage() {
           <SectionIntro
             eyebrow="Reviews"
             title="What Local Homeowners Are Saying"
-            body="Real feedback from customers we&rsquo;ve helped across Ladner, Tsawwassen, and North Delta."
+            body="Real feedback from customers we&rsquo;ve helped across South Delta."
           />
           <TestimonialsSlider />
         </div>
@@ -298,7 +327,7 @@ export default function HomePage() {
           <SectionIntro
             eyebrow="Service areas"
             title="Proudly Serving South Delta"
-            body="We provide plumbing, heating, and gas services throughout Ladner, Tsawwassen, and North Delta, with fast response times and reliable scheduling."
+            body="We work in Ladner, Tsawwassen, and North Delta every day, helping homeowners with plumbing, heating, and gas work they can rely on."
           />
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {serviceAreas.map((area) => (

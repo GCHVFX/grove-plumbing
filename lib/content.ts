@@ -29,7 +29,7 @@ export const services = [
     shortTitle: "Plumbing",
     icon: Wrench,
     summary:
-      "Leaking taps, running toilets, and fixture replacements handled cleanly and quickly.",
+      "Leaks, fixture replacements, and everyday plumbing repairs handled properly the first time.",
     intro:
       "From a dripping tap to a larger plumbing repair, Grove helps homeowners get practical fixes without the runaround.",
     problems: [
@@ -51,7 +51,7 @@ export const services = [
     shortTitle: "Drains",
     icon: Droplets,
     summary:
-      "Slow drains, kitchen clogs, and recurring backups cleared with practical next steps.",
+      "Clogged or slow drains cleared safely so things flow the way they should.",
     intro:
       "Slow drains and backups can turn stressful quickly. Grove clears the issue and helps you understand what caused it.",
     problems: [
@@ -73,7 +73,7 @@ export const services = [
     shortTitle: "Water Heaters",
     icon: Heater,
     summary:
-      "No hot water, leaking tanks, and replacement installs for reliable hot water again.",
+      "No hot water or aging tank? We repair and replace systems so you're not left guessing.",
     intro:
       "Whether you have no hot water or an aging tank, Grove can help you choose the right next step for your home.",
     problems: [
@@ -95,7 +95,7 @@ export const services = [
     shortTitle: "Heating",
     icon: Home,
     summary:
-      "Cold rooms, noisy systems, and heating repairs to keep your home comfortable.",
+      "Reliable heating repairs and maintenance to keep your home comfortable.",
     intro:
       "Grove brings practical heating support for homeowners who want clear answers and steady service.",
     problems: [
@@ -117,7 +117,7 @@ export const services = [
     shortTitle: "Gas Fitting",
     icon: Flame,
     summary:
-      "Licensed gas line installs, appliance hookups, and safety checks for home upgrades.",
+      "Safe, licensed gas fitting for appliances, lines, and upgrades.",
     intro:
       "Gas work needs proper experience and attention. Grove supports safe, licensed gas fitting for local homeowners.",
     problems: [
@@ -186,19 +186,19 @@ export const testimonials = [
     name: "Sarah M.",
     location: "Ladner",
     quote:
-      "A leaking shutoff under our kitchen sink was soaking the cabinet. Grove fixed it the same afternoon and everything has stayed dry since."
+      "Our laundry drain backed up and water started pooling fast. Grove arrived the same day, cleared the line, and explained what to watch for."
   },
   {
     name: "Rob T.",
     location: "Tsawwassen",
     quote:
-      "Our kitchen drain kept clogging every few weeks. They cleared the blockage properly, explained what caused it, and it has drained normally ever since."
+      "Our hot water tank started leaking the night before guests arrived. We got a clear plan and price, and the new tank was in the next day."
   },
   {
     name: "Jennifer L.",
     location: "North Delta",
     quote:
-      "We had no hot water two days before family arrived. Grove walked us through options and replaced the tank quickly, so we were back to normal by the next evening."
+      "We needed a gas line updated for a new stove and wanted it done safely. The work was tidy, tested properly, and everything was explained clearly."
   }
 ];
 

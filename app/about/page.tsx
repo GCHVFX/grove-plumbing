@@ -1,54 +1,108 @@
 import Image from "next/image";
-import { CtaBand } from "@/components/cta-band";
-import { SectionIntro } from "@/components/ui";
-import { trustSignals, whyGrove } from "@/lib/content";
 
 export default function AboutPage() {
   return (
     <>
       <section className="bg-cream py-16">
-        <div className="container grid gap-10 md:grid-cols-[0.9fr_1.1fr]">
-          <SectionIntro
-            eyebrow="About Grove"
-            title="A local plumbing company presented with the confidence it deserves"
-            body="Grove Plumbing serves South Delta homeowners with practical advice, clean workmanship, and dependable communication from start to finish."
-          />
-          <div className="overflow-hidden rounded-md border border-grove-100 bg-white shadow-soft">
+        <div className="container">
+          <h1 className="text-4xl font-black leading-tight text-pipe md:text-5xl">
+            About Grove Plumbing
+          </h1>
+          <p className="mt-3 text-lg leading-8 text-slate-700">
+            Local, family-run service in South Delta
+          </p>
+
+          <div className="mt-10 grid items-start gap-8 md:grid-cols-[1.05fr_0.95fr]">
+            <div className="space-y-4 leading-7 text-slate-700">
+              <p>
+                Born and raised in South Delta, David Mueller started Grove
+                Plumbing &amp; Heating to provide straightforward service for
+                local homeowners.
+              </p>
+              <p>
+                This is a family-run business, and we still work in the same
+                community we live in. We keep communication clear, do the work
+                properly, and treat people fairly.
+              </p>
+            </div>
+            <div className="overflow-hidden rounded-xl border border-grove-100 bg-white shadow-soft">
+              <div className="relative aspect-[16/9]">
+                <Image
+                  src="/owner-van.png"
+                  alt="David Mueller beside the Grove Plumbing van in South Delta"
+                  fill
+                  className="object-cover"
+                  style={{ objectFit: "cover", objectPosition: "center left" }}
+                  sizes="(max-width: 768px) 100vw, 45vw"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-16">
+        <div className="container grid items-center gap-8 md:grid-cols-[0.95fr_1.05fr]">
+          <div className="overflow-hidden rounded-xl border border-grove-100 bg-white shadow-soft">
             <div className="relative aspect-[4/3]">
               <Image
                 src="/family.png"
-                alt="Grove Plumbing owner standing beside the service van"
+                alt="Grove Plumbing family in South Delta"
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 768px) 100vw, 42vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-pipe/55 via-transparent to-transparent" />
-              <p className="absolute bottom-4 left-4 rounded-md bg-white/95 px-3 py-2 text-sm font-black text-pipe">
-                Family-owned and community-focused
-              </p>
             </div>
+          </div>
+          <div>
+            <h2 className="text-3xl font-black leading-tight text-pipe">
+              Rooted in South Delta
+            </h2>
+            <p className="mt-3 leading-7 text-slate-700">
+              This is the community we grew up in, and it&rsquo;s still where
+              we work every day.
+            </p>
           </div>
         </div>
       </section>
+
       <section className="bg-white py-16">
-        <div className="container grid gap-5 md:grid-cols-2">
-          {whyGrove.map((item) => (
-            <div key={item.title} className="rounded-md border border-grove-100 bg-cream p-6">
-              <h2 className="text-xl font-black text-pipe">{item.title}</h2>
-              <p className="mt-3 leading-7 text-slate-700">{item.body}</p>
-            </div>
-          ))}
-          <div className="rounded-md border border-grove-100 bg-pipe p-6 text-white">
-            <h2 className="text-xl font-black">Trust signals</h2>
-            <ul className="mt-4 grid gap-3 text-grove-50">
-              {trustSignals.map((signal) => (
-                <li key={signal}>{signal}</li>
-              ))}
-            </ul>
-          </div>
+        <div className="container max-w-4xl">
+          <h2 className="text-3xl font-black leading-tight text-pipe">
+            How We Work
+          </h2>
+          <p className="mt-3 text-sm leading-6 text-slate-500">
+            One principle we believe in:
+          </p>
+          <p className="mt-3 text-sm leading-6 text-slate-500">
+            &quot;Integrity is doing the right thing, even when no one is
+            watching.&quot;
+            <span className="block">&mdash; C.S. Lewis</span>
+          </p>
+
+          <ul className="mt-6 grid gap-3">
+            {[
+              "We show up when we say we will",
+              "We explain things clearly before starting",
+              "We keep work clean and respectful in your home",
+              "No pressure, no upselling"
+            ].map((point) => (
+              <li
+                key={point}
+                className="rounded-md border border-grove-100 bg-cream px-5 py-4 text-slate-700"
+              >
+                {point}
+              </li>
+            ))}
+          </ul>
+
+          <p className="mt-10 leading-7 text-slate-700">
+            If you need help with plumbing, heating, or gas, feel free to reach
+            out. We&rsquo;re happy to take a look and let you know what&rsquo;s
+            involved.
+          </p>
         </div>
       </section>
-      <CtaBand title="Make the next call feel easy" />
     </>
   );
 }
