@@ -25,11 +25,11 @@ export const trustSignals = [
 export const services = [
   {
     slug: "plumbing-services",
-    title: "Plumbing Services",
+    title: "Leaks, Repairs & Fixture Work",
     shortTitle: "Plumbing",
     icon: Wrench,
     summary:
-      "Leaks, fixture replacements, and everyday plumbing repairs handled properly the first time.",
+      "Dripping taps, leaking pipes, or new fixtures that need installing. We handle everyday plumbing issues properly the first time.",
     intro:
       "From a dripping tap to a larger plumbing repair, Grove helps homeowners get practical fixes without the runaround.",
     problems: [
@@ -47,11 +47,11 @@ export const services = [
   },
   {
     slug: "drain-cleaning",
-    title: "Drain Cleaning",
+    title: "Clogged or Slow Drains",
     shortTitle: "Drains",
     icon: Droplets,
     summary:
-      "Clogged or slow drains cleared safely so things flow the way they should.",
+      "Sinks, tubs, or main lines backing up or draining slowly. We clear it safely and make sure it flows properly again.",
     intro:
       "Slow drains and backups can turn stressful quickly. Grove clears the issue and helps you understand what caused it.",
     problems: [
@@ -69,11 +69,11 @@ export const services = [
   },
   {
     slug: "water-heater-repair-installation",
-    title: "Water Heater Repair & Installation",
+    title: "No Hot Water or Tank Issues",
     shortTitle: "Water Heaters",
     icon: Heater,
     summary:
-      "No hot water or aging tank? We repair and replace systems so you're not left guessing.",
+      "No hot water, strange noises, or an aging tank. We repair or replace systems so you're not left guessing.",
     intro:
       "Whether you have no hot water or an aging tank, Grove can help you choose the right next step for your home.",
     problems: [
@@ -91,11 +91,11 @@ export const services = [
   },
   {
     slug: "heating-services",
-    title: "Heating Services",
+    title: "Heating Repairs & Maintenance",
     shortTitle: "Heating",
     icon: Home,
     summary:
-      "Reliable heating repairs and maintenance to keep your home comfortable.",
+      "Furnace or heating issues keeping your home uncomfortable. We diagnose the problem and get things working again.",
     intro:
       "Grove brings practical heating support for homeowners who want clear answers and steady service.",
     problems: [
@@ -113,11 +113,11 @@ export const services = [
   },
   {
     slug: "gas-fitting",
-    title: "Gas Fitting",
+    title: "Gas Fitting & Appliance Hookups",
     shortTitle: "Gas Fitting",
     icon: Flame,
     summary:
-      "Safe, licensed gas fitting for appliances, lines, and upgrades.",
+      "Safe, licensed gas work for appliances, lines, and upgrades. Done properly and up to code.",
     intro:
       "Gas work needs proper experience and attention. Grove supports safe, licensed gas fitting for local homeowners.",
     problems: [

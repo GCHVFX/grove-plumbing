@@ -72,9 +72,9 @@ export default function AboutPage() {
             How We Work
           </h2>
           <p className="mt-3 text-sm leading-6 text-slate-500">
-            One principle we believe in:
+            We try to keep things simple. One principle we believe in:
           </p>
-          <p className="mt-3 text-sm leading-6 text-slate-500">
+          <p className="text-sm leading-6 text-slate-500">
             &quot;Integrity is doing the right thing, even when no one is
             watching.&quot;
             <span className="block">&mdash; C.S. Lewis</span>

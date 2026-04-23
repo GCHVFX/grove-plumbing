@@ -63,7 +63,7 @@ export default function HomePage() {
             <p className="mt-3 max-w-2xl text-lg leading-8 text-slate-700">
               Local, family-run service for homes in Ladner, Tsawwassen, and
               North Delta. If something isn&rsquo;t working the way it should,
-              we&rsquo;ll get it sorted.
+              we&rsquo;ll come take a look and get it sorted.
             </p>
             <div className="mt-5 flex flex-col gap-3 sm:flex-row">
               <Button href="/book-service">
@@ -157,7 +157,7 @@ export default function HomePage() {
               in doing the work properly.
             </p>
             <Button href="/about" variant="secondary" className="mt-5">
-              Learn more about Grove
+              Learn more about how we work
             </Button>
           </div>
           <div className="overflow-hidden rounded-[16px] border border-grove-100 bg-white shadow-soft">
@@ -197,10 +197,15 @@ export default function HomePage() {
 
       <section className="bg-white py-20">
         <div className="container grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-          <SectionIntro
-            eyebrow="Why Grove"
-            title="Why Homeowners Call Grove Plumbing"
-          />
+          <div>
+            <SectionIntro
+              eyebrow="Why Grove"
+              title="Why Homeowners Call Grove Plumbing"
+            />
+            <p className="mt-4 leading-7 text-slate-700">
+              We focus on straightforward service and doing the job properly.
+            </p>
+          </div>
           <ul className="grid gap-3 rounded-md border border-grove-100 bg-cream p-6 md:p-7">
             {[
               "Shows up when scheduled",
