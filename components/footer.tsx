@@ -1,4 +1,12 @@
-import { Globe, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import {
+  Facebook,
+  Globe,
+  Instagram,
+  Mail,
+  MapPin,
+  MessageCircle,
+  Phone
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -12,6 +20,9 @@ import {
 } from "@/lib/content";
 
 export function Footer() {
+  const facebookUrl = "https://www.facebook.com/groveplumbingheatinggas";
+  const instagramUrl = "https://www.instagram.com/groveplumbingandheating";
+
   return (
     <footer className="bg-pipe text-white">
       <div className="container grid gap-10 py-14 md:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]">
@@ -38,6 +49,18 @@ export function Footer() {
           <p className="mt-3 max-w-sm text-sm leading-7 text-grove-100">
             {serviceHours}
           </p>
+          <div className="mt-5 flex items-center gap-3">
+            <Image
+              src="/LBA.png"
+              alt="Ladner Business Association logo"
+              width={32}
+              height={32}
+              className="h-8 w-auto opacity-90"
+            />
+            <p className="text-xs leading-5 text-grove-100">
+              Proud member of the Ladner Business Association
+            </p>
+          </div>
         </div>
         <div>
           <p className="font-bold">Services</p>
@@ -82,6 +105,26 @@ export function Footer() {
               <MapPin className="mt-0.5 h-4 w-4" />
               Ladner, Tsawwassen, North Delta
             </span>
+            <div className="mt-1 flex items-center gap-3 text-grove-100">
+              <a
+                href={facebookUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Follow Grove Plumbing on Facebook"
+                className="focus-ring rounded-sm transition hover:text-white"
+              >
+                <Facebook className="h-4 w-4" />
+              </a>
+              <a
+                href={instagramUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Follow Grove Plumbing on Instagram"
+                className="focus-ring rounded-sm transition hover:text-white"
+              >
+                <Instagram className="h-4 w-4" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
