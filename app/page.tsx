@@ -20,20 +20,20 @@ export default function HomePage() {
   return (
     <>
       <section className="overflow-hidden bg-[linear-gradient(160deg,#fbf7ef_5%,#f3f8f1_48%,#ffffff_100%)]">
-        <div className="container grid items-center gap-8 py-10 md:grid-cols-[1.05fr_0.95fr] md:py-12">
+        <div className="container grid items-center gap-7 py-8 md:grid-cols-[1.05fr_0.95fr] md:py-10">
           <div>
-            <p className="mb-4 inline-flex rounded-md bg-grove-100 px-4 py-2 text-sm font-bold text-grove-800">
+            <p className="mb-3 inline-flex rounded-md bg-grove-100 px-4 py-2 text-sm font-bold text-grove-800">
               Serving Ladner, Tsawwassen, and North Delta
             </p>
             <h1 className="text-4xl font-black leading-tight text-pipe md:text-6xl">
-              Local Plumbing, Heating & Gas Services You Can Count On
+              Plumbing, Heating & Gas Done Right
             </h1>
-            <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-700">
-              Dependable plumbing, heating, gas, and drain services for South
-              Delta homes with clear communication, tidy work, and an easy
-              online request process.
+            <p className="mt-3 max-w-2xl text-lg leading-8 text-slate-700">
+              Serving Ladner, Tsawwassen, and North Delta with dependable
+              service, clear communication, and work done properly the first
+              time.
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row">
               <Button href="/book-service">
                 <CalendarCheck className="h-4 w-4" />
                 Request Service
@@ -43,7 +43,7 @@ export default function HomePage() {
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </div>
-            <div className="mt-5 flex flex-wrap gap-3">
+            <div className="mt-4 flex flex-wrap gap-3">
               <span className="rounded-md bg-white px-3 py-2 text-sm font-bold text-pipe shadow-sm">
                 Licensed and insured
               </span>
@@ -123,8 +123,8 @@ export default function HomePage() {
         <div className="container grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
           <SectionIntro
             eyebrow="Why Grove"
-            title="Built around trust before the phone even rings"
-            body="Professional presentation, real local photos, and clear service language make the next step obvious."
+            title="Why homeowners choose Grove"
+            body="You get practical recommendations, dependable workmanship, and clear updates from a local team that treats your home with care."
           />
           <div className="grid gap-4">
             {whyGrove.map((item) => (
@@ -182,11 +182,15 @@ export default function HomePage() {
               Request service
             </p>
             <h2 className="mt-3 text-3xl font-black leading-tight md:text-4xl">
-              A clear booking flow that collects the right details
+              Need Plumbing, Heating, or Gas Help?
             </h2>
             <p className="mt-4 leading-7 text-grove-50">
-              Homeowners can choose the service, preferred date, and time
-              window, then submit contact details for confirmation.
+              Tell us what you need, choose a preferred time, and we'll get back
+              to you quickly to confirm the details.
+            </p>
+            <p className="mt-3 text-sm leading-6 text-grove-100">
+              For urgent issues, call us directly and we will do our best to
+              help right away.
             </p>
           </div>
           <BookingFlow />
