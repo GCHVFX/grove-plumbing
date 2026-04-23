@@ -1,0 +1,70 @@
+import { Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
+import { emailAddress, phoneNumber, services, serviceAreas } from "@/lib/content";
+
+export function Footer() {
+  return (
+    <footer className="bg-pipe text-white">
+      <div className="container grid gap-10 py-14 md:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]">
+        <div>
+          <div className="flex items-center gap-3">
+            <span className="grid h-12 w-12 place-items-center rounded-md bg-grove-500 text-lg font-black">
+              GP
+            </span>
+            <div>
+              <p className="text-lg font-black">Grove Plumbing</p>
+              <p className="text-sm text-grove-100">Local plumbing, heating, and gas</p>
+            </div>
+          </div>
+          <p className="mt-5 max-w-sm text-sm leading-7 text-grove-50">
+            Proposal demo for a warmer, clearer, and more lead-focused Grove
+            Plumbing website serving Ladner, Tsawwassen, and North Delta.
+          </p>
+        </div>
+        <div>
+          <p className="font-bold">Services</p>
+          <div className="mt-4 grid gap-3 text-sm text-grove-50">
+            {services.slice(0, 5).map((service) => (
+              <Link key={service.slug} href={`/services/${service.slug}`}>
+                {service.shortTitle}
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div>
+          <p className="font-bold">Areas</p>
+          <div className="mt-4 grid gap-3 text-sm text-grove-50">
+            {serviceAreas.map((area) => (
+              <Link key={area.slug} href={`/service-areas/${area.slug}`}>
+                {area.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div>
+          <p className="font-bold">Contact</p>
+          <div className="mt-4 grid gap-3 text-sm text-grove-50">
+            <a href={`tel:${phoneNumber.replace(/\D/g, "")}`} className="flex gap-2">
+              <Phone className="mt-0.5 h-4 w-4" />
+              {phoneNumber}
+            </a>
+            <a href={`mailto:${emailAddress}`} className="flex gap-2">
+              <Mail className="mt-0.5 h-4 w-4" />
+              {emailAddress}
+            </a>
+            <span className="flex gap-2">
+              <MapPin className="mt-0.5 h-4 w-4" />
+              Ladner, Tsawwassen, North Delta
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="border-t border-white/10 py-5">
+        <div className="container flex flex-col gap-2 text-xs text-grove-100 md:flex-row md:items-center md:justify-between">
+          <span>Copyright 2026 Grove Plumbing demo concept.</span>
+          <span>Licensed and insured. Red Seal certified experience.</span>
+        </div>
+      </div>
+    </footer>
+  );
+}

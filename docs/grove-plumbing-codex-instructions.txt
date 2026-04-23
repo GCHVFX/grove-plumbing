@@ -1,0 +1,86 @@
+Build a proposal-quality front-end website demo for Grove Plumbing using Next.js App Router, TypeScript, Tailwind CSS, and shadcn/ui.
+
+Read the attached project brief and content guide first, then follow them closely.
+
+HIGH-LEVEL GOAL
+This is a redesign proposal meant to wow a small local plumbing business owner. It should modernise the whole business presence, make the company feel more established, and show how the site could generate more leads with better structure and a realistic booking flow.
+
+IMPORTANT
+- Use Canadian spelling throughout.
+- Do not use em dashes.
+- Keep the tone warm, local, practical, and trustworthy.
+- Avoid a generic AI-looking design.
+- Use the supplied Grove assets prominently.
+- This is front-end only, but structure it so backend forms/booking can be added later.
+
+BUILD THESE PAGES
+- Home
+- About
+- Services hub
+- Plumbing Services
+- Drain Cleaning
+- Water Heater Repair & Installation
+- Heating Services
+- Gas Fitting
+- Emergency Plumbing
+- Service Areas hub
+- Ladner
+- Tsawwassen
+- North Delta
+- Book Service
+- Contact
+
+REQUIRED FEATURES
+- Responsive navigation
+- Strong homepage hero
+- Sticky call button on mobile
+- Header CTA on desktop
+- Services grid
+- Testimonials slider
+- FAQ accordion sections
+- embedded map section
+- realistic multi-step booking/request service UI
+- repeated CTA sections throughout
+
+BOOKING FLOW
+Create a polished front-end only booking/request flow:
+1. Select service
+2. Pick preferred date
+3. Pick time slot
+4. Enter contact details
+5. Show confirmation message
+
+Use wording like “Request Service” and “We’ll confirm your appointment” so the flow feels realistic without a backend.
+
+DESIGN DIRECTION
+- Warm, local, trustworthy
+- Soft greens inspired by the Grove logo
+- Off-white backgrounds where useful
+- Rounded cards
+- Clean spacing
+- Professional typography
+- Trust-building use of real imagery
+
+DO NOT
+- Make it look like a startup SaaS dashboard
+- Use overly corporate messaging
+- Overcomplicate the layout
+- Use fake boilerplate copy that sounds generic
+
+CONTENT PRIORITIES
+Emphasise:
+- Licensed and insured
+- Red Seal certified
+- Local/family-owned angle
+- Serving Ladner, Tsawwassen, and North Delta
+- Easy contact and easier booking
+- Professional service for homeowners
+
+OUTPUT EXPECTATIONS
+Return:
+- clear folder structure
+- reusable components
+- clean page composition
+- sensible placeholder data where needed
+- maintainable code
+- demo-ready visual polish
