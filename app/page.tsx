@@ -30,8 +30,8 @@ export default function HomePage() {
             </h1>
             <p className="mt-3 max-w-2xl text-lg leading-8 text-slate-700">
               Serving Ladner, Tsawwassen, and North Delta with dependable
-              service, clear communication, and work done properly the first
-              time.
+              plumbing, heating, gas, and drain services. Request service
+              online and we&rsquo;ll confirm a time that works for you.
             </p>
             <div className="mt-5 flex flex-col gap-3 sm:flex-row">
               <Button href="/book-service">
@@ -45,16 +45,16 @@ export default function HomePage() {
             </div>
             <div className="mt-4 flex flex-wrap gap-3">
               <span className="rounded-md bg-white px-3 py-2 text-sm font-bold text-pipe shadow-sm">
-                Licensed and insured
+                Licensed & insured •
               </span>
               <span className="rounded-md bg-white px-3 py-2 text-sm font-bold text-pipe shadow-sm">
-                Red Seal certified
+                Red Seal certified •
               </span>
               <a
                 href={`tel:${phoneNumber.replace(/\D/g, "")}`}
                 className="focus-ring rounded-md bg-white px-3 py-2 text-sm font-bold text-pipe shadow-sm"
               >
-                Call {phoneNumber}
+                Local, reliable service
               </a>
             </div>
           </div>
@@ -92,7 +92,12 @@ export default function HomePage() {
 
       <section className="border-y border-grove-100 bg-white py-6">
         <div className="container grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {trustSignals.map((signal) => (
+          {[
+            "Local service you can rely on.",
+            "Straightforward work,",
+            "clear communication,",
+            "and no runaround."
+          ].map((signal) => (
             <div
               key={signal}
               className="flex min-h-14 items-center gap-3 rounded-md border border-grove-100 bg-cream px-4 font-bold text-pipe"
@@ -108,8 +113,8 @@ export default function HomePage() {
         <div className="container">
           <SectionIntro
             eyebrow="Services"
-            title="The plumbing and mechanical help homeowners actually need"
-            body="Clear service pages make it easy for homeowners to choose the right service and request a visit quickly."
+            title="Plumbing, Heating & Gas Services for Your Home"
+            body="From small repairs to larger jobs, we handle the work homeowners deal with every day. If something isn&rsquo;t working the way it should, we&rsquo;ll get it sorted."
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
@@ -123,8 +128,8 @@ export default function HomePage() {
         <div className="container grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
           <SectionIntro
             eyebrow="Why Grove"
-            title="Why homeowners choose Grove"
-            body="You get practical recommendations, dependable workmanship, and clear updates from a local team that treats your home with care."
+            title="Why Homeowners Choose Grove Plumbing"
+            body="We keep things simple. Show up when we say we will, explain the work clearly, and get it done properly."
           />
           <div className="grid gap-4">
             {whyGrove.map((item) => (
@@ -144,8 +149,8 @@ export default function HomePage() {
         <div className="container">
           <SectionIntro
             eyebrow="Recent work"
-            title="Real project photos from day-to-day service"
-            body="Homeowners can see the kind of work Grove handles across bathrooms, laundry rooms, and mechanical spaces."
+            title="Recent Work Around South Delta"
+            body="A look at the kind of work we do for homeowners in Ladner, Tsawwassen, and North Delta."
           />
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {[
@@ -185,8 +190,8 @@ export default function HomePage() {
               Need Plumbing, Heating, or Gas Help?
             </h2>
             <p className="mt-4 leading-7 text-grove-50">
-              Tell us what you need, choose a preferred time, and we'll get back
-              to you quickly to confirm the details.
+              Tell us what you need, choose a preferred time, and we&rsquo;ll get
+              back to you quickly to confirm the details.
             </p>
             <p className="mt-3 text-sm leading-6 text-grove-100">
               For urgent issues, call us directly and we will do our best to
@@ -201,8 +206,8 @@ export default function HomePage() {
         <div className="container grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <SectionIntro
             eyebrow="Reviews"
-            title="Specific local testimonials feel more believable"
-            body="Short, grounded reviews help homeowners feel confident without relying on overblown claims."
+            title="What Local Homeowners Are Saying"
+            body="Real feedback from customers we&rsquo;ve helped across Ladner, Tsawwassen, and North Delta."
           />
           <TestimonialsSlider />
         </div>
@@ -212,8 +217,8 @@ export default function HomePage() {
         <div className="container">
           <SectionIntro
             eyebrow="Service areas"
-            title="Local pages for South Delta search visibility"
-            body="Dedicated area pages help Grove show up for homeowners looking for plumbing help near them."
+            title="Proudly Serving South Delta"
+            body="We provide plumbing, heating, and gas services throughout Ladner, Tsawwassen, and North Delta, with fast response times and reliable scheduling."
           />
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {serviceAreas.map((area) => (
@@ -235,14 +240,17 @@ export default function HomePage() {
         <div className="container grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <SectionIntro
             eyebrow="FAQs"
-            title="Fast answers before customers reach out"
-            body="Clear answers reduce hesitation and make the next action obvious."
+            title="Common Questions"
+            body="Quick answers to questions we hear from homeowners."
           />
           <FaqAccordion faqs={homeFaqs} />
         </div>
       </section>
 
-      <CtaBand />
+      <CtaBand
+        title="Need Help With a Plumbing, Heating, or Gas Issue?"
+        body="Get in touch or request service online. We&rsquo;ll follow up to confirm the details and get you booked in."
+      />
     </>
   );
 }
