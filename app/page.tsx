@@ -1,4 +1,4 @@
-import { ArrowRight, CalendarCheck, MapPin, ShieldCheck } from "lucide-react";
+import { ArrowRight, CalendarCheck, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { BookingFlow } from "@/components/booking-flow";
@@ -12,11 +12,44 @@ import {
   phoneNumber,
   services,
   serviceAreas,
-  trustSignals,
   whyGrove
 } from "@/lib/content";
 
 export default function HomePage() {
+  const serviceCardImages: Record<
+    string,
+    { src: string; alt: string; objectPosition?: string }
+  > = {
+    "plumbing-services": {
+      src: "/quick-kitchen-sink-drain-fix-plumbing-job.jpg",
+      alt: "Kitchen sink drain repair in a residential home",
+      objectPosition: "50% 50%"
+    },
+    "drain-cleaning": {
+      src: "/sink-drain.jpg",
+      alt: "Hands clearing a residential sink drain pipe",
+      objectPosition: "50% 60%"
+    },
+    "water-heater-repair-installation": {
+      src: "/modern-electric-boiler-room-in-the-house.jpg",
+      alt: "Modern residential boiler and water heater equipment",
+      objectPosition: "60% 50%"
+    },
+    "heating-services": {
+      src: "/heating-system-final-adjustment-performed-by-technician.jpeg",
+      alt: "Technician completing a heating system adjustment",
+      objectPosition: "50% 50%"
+    },
+    "gas-fitting": {
+      src: "/mechanical-room.png",
+      alt: "Mechanical room equipment for gas fitting and service"
+    },
+    "emergency-plumbing": {
+      src: "/bathroom.png",
+      alt: "Active bathroom plumbing repair work"
+    }
+  };
+
   return (
     <>
       <section className="overflow-hidden bg-[linear-gradient(160deg,#fbf7ef_5%,#f3f8f1_48%,#ffffff_100%)]">
@@ -58,32 +91,28 @@ export default function HomePage() {
               </a>
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-md border border-grove-100 bg-white shadow-soft">
-            <div className="relative aspect-[1175/452]">
-              <Image
-                src="/van.png"
-                alt="Grove Plumbing service van in South Delta"
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 768px) 100vw, 52vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-tr from-pipe/35 via-transparent to-transparent" />
-            </div>
-            <div className="grid gap-3 border-t border-grove-100 bg-white p-5 sm:grid-cols-2">
-              <div className="rounded-md bg-grove-50 p-4">
-                <p className="text-xs font-bold uppercase tracking-[0.14em] text-grove-700">
-                  Trusted locally
-                </p>
-                <p className="mt-2 text-lg font-black text-pipe">Family-owned in South Delta</p>
+          <div className="grid gap-4">
+            <div className="relative overflow-hidden rounded-md border border-grove-100 bg-white shadow-soft">
+              <div className="relative aspect-[1175/452]">
+                <Image
+                  src="/van.png"
+                  alt="Grove Plumbing service van in South Delta"
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 52vw"
+                />
               </div>
-              <div className="rounded-md bg-grove-50 p-4">
-                <p className="text-xs font-bold uppercase tracking-[0.14em] text-grove-700">
-                  Straightforward service
-                </p>
-                <p className="mt-2 text-lg font-black text-pipe">
-                  Clear recommendations and no runaround
-                </p>
+            </div>
+            <div className="relative overflow-hidden rounded-md border border-grove-100 bg-white shadow-soft">
+              <div className="relative aspect-[1175/360]">
+                <Image
+                  src="/modern-electric-boiler-room-in-the-house.jpg"
+                  alt="Modern residential boiler room equipment"
+                  fill
+                  className="object-cover object-[center_48%]"
+                  sizes="(max-width: 768px) 100vw, 52vw"
+                />
               </div>
             </div>
           </div>
@@ -91,21 +120,30 @@ export default function HomePage() {
       </section>
 
       <section className="border-y border-grove-100 bg-white py-6">
-        <div className="container grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            "Local service you can rely on.",
-            "Straightforward work,",
-            "clear communication,",
-            "and no runaround."
-          ].map((signal) => (
-            <div
-              key={signal}
-              className="flex min-h-14 items-center gap-3 rounded-md border border-grove-100 bg-cream px-4 font-bold text-pipe"
-            >
-              <ShieldCheck className="h-5 w-5 shrink-0 text-grove-700" />
-              {signal}
+        <div className="container">
+          <p className="rounded-md border border-grove-100 bg-cream px-4 py-4 text-center font-bold text-pipe">
+            Local service you can rely on. Clear communication and
+            straightforward work from start to finish.
+          </p>
+        </div>
+      </section>
+
+      <section className="mt-8 mb-10 md:mt-12 md:mb-16">
+        <div className="container">
+          <div
+            className="overflow-hidden rounded-[16px] border border-grove-100 bg-white"
+            style={{ boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}
+          >
+            <div className="relative h-[200px] md:h-[300px]">
+              <Image
+                src="/two-old-taps.jpg"
+                alt="Residential plumbing fixture taps in a home"
+                fill
+                className="object-cover object-center"
+                sizes="100vw"
+              />
             </div>
-          ))}
+          </div>
         </div>
       </section>
 
@@ -118,7 +156,11 @@ export default function HomePage() {
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
-              <ServiceCard key={service.slug} service={service} />
+              <ServiceCard
+                key={service.slug}
+                service={service}
+                image={serviceCardImages[service.slug]}
+              />
             ))}
           </div>
         </div>
@@ -152,11 +194,24 @@ export default function HomePage() {
             title="Recent Work Around South Delta"
             body="A look at the kind of work we do for homeowners in Ladner, Tsawwassen, and North Delta."
           />
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
+          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { src: "/bathroom.png", alt: "Bathroom plumbing repair and fixture work", label: "Bathroom plumbing" },
-              { src: "/laundry.png", alt: "Laundry plumbing installation and updates", label: "Laundry updates" },
-              { src: "/mechanical-room.png", alt: "Mechanical room service and troubleshooting", label: "Mechanical room service" }
+              {
+                src: "/new-bath-installation-new-house.jpg",
+                alt: "New bathroom plumbing installation in a home"
+              },
+              {
+                src: "/shower.png",
+                alt: "Shower plumbing and fixture installation"
+              },
+              {
+                src: "/bathroom.png",
+                alt: "Bathroom plumbing service and repair"
+              },
+              {
+                src: "/laundry.png",
+                alt: "Laundry plumbing and appliance connection work"
+              }
             ].map((image) => (
               <div
                 key={image.src}
@@ -168,11 +223,8 @@ export default function HomePage() {
                     alt={image.alt}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
-                </div>
-                <div className="p-4">
-                  <p className="font-black text-pipe">{image.label}</p>
                 </div>
               </div>
             ))}
