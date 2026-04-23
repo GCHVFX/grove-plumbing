@@ -133,7 +133,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mt-8 mb-10 md:mt-12 md:mb-16">
+      <section className="mt-8 md:mt-12">
         <div className="container grid items-start gap-8 md:grid-cols-[1.05fr_0.95fr]">
           <div>
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.14em] text-grove-700">
@@ -174,29 +174,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mb-10 md:mb-16">
-        <div className="container">
-          <p className="mb-3 text-sm font-semibold text-slate-600">
-            Real work, real homes across South Delta.
-          </p>
-          <div
-            className="overflow-hidden rounded-[16px] border border-grove-100 bg-white"
-            style={{ boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}
-          >
-            <div className="relative h-[200px] md:h-[300px]">
-              <Image
-                src="/two-old-taps.jpg"
-                alt="Residential plumbing fixture taps in a South Delta home"
-                fill
-                className="object-cover object-center"
-                sizes="100vw"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
+      <section className="mt-10 py-20 md:mt-14">
         <div className="container">
           <SectionIntro
             eyebrow="Services"
