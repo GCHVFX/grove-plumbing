@@ -4,19 +4,22 @@ import {
   Home,
   PhoneCall,
   ShieldCheck,
-  ShowerHead,
   Droplets,
   Wrench
 } from "lucide-react";
 
-export const phoneNumber = "(604) 555-0198";
-export const emailAddress = "hello@groveplumbing.ca";
+export const phoneNumber = "(604) 943-5959";
+export const textNumber = "(778) 908-3283";
+export const emailAddress = "david@groveplumbing.ca";
+export const websiteUrl = "https://www.groveplumbing.ca";
+export const serviceHours =
+  "Regular hours: 8am to 8pm, Monday to Saturday. Emergency on-call support available after hours.";
 
 export const trustSignals = [
-  "Licensed and insured",
-  "Red Seal certified",
-  "Local and family-owned",
-  "Serving South Delta"
+  "Licensed and insured work",
+  "Red Seal certified team",
+  "Family-owned in South Delta",
+  "Serving Ladner, Tsawwassen, and North Delta"
 ];
 
 export const services = [
@@ -208,7 +211,7 @@ export const homeFaqs = [
   {
     question: "Can I request service online?",
     answer:
-      "Yes. Use the request service flow to share the problem, choose a preferred date and time window, and Grove will follow up to confirm."
+      "Yes. Request service online, choose your preferred date and time, and Grove will follow up to confirm your appointment."
   },
   {
     question: "Do you handle heating and gas work too?",
@@ -218,7 +221,7 @@ export const homeFaqs = [
   {
     question: "Are you licensed and insured?",
     answer:
-      "Yes. The demo highlights licensed and insured work, along with Red Seal certified experience."
+      "Yes. Grove provides licensed and insured work with Red Seal certified experience."
   }
 ];
 

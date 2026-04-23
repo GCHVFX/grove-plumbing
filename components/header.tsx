@@ -1,6 +1,7 @@
 "use client";
 
 import { Menu, Phone, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui";
@@ -21,8 +22,15 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-grove-100 bg-cream/95 backdrop-blur">
       <div className="container flex min-h-20 items-center justify-between gap-4">
         <Link href="/" className="focus-ring flex items-center gap-3 rounded-md">
-          <span className="grid h-12 w-12 place-items-center rounded-md bg-grove-700 text-lg font-black text-white">
-            GP
+          <span className="rounded-md bg-white px-2 py-2 shadow-sm">
+            <Image
+              src="/logo.png"
+              alt="Grove Plumbing logo"
+              width={146}
+              height={45}
+              className="h-8 w-auto"
+              priority
+            />
           </span>
           <span>
             <span className="block text-lg font-black leading-5 text-pipe">

@@ -50,8 +50,9 @@ export default function ServiceAreaPage({ params }: { params: { slug: string } }
             <h2 className="text-2xl font-black text-pipe">Local reassurance</h2>
             <p className="mt-4 leading-7 text-slate-700">
               Homeowners in {area.name} need tradespeople who are easy to reach,
-              clear about the work, and familiar with local homes. Grove's demo
-              presence makes that confidence visible.
+              clear about the work, and familiar with local homes. Grove's
+              local service approach helps homeowners feel looked after from the
+              first call.
             </p>
           </div>
         </div>

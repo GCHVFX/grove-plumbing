@@ -1,6 +1,15 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Globe, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
-import { emailAddress, phoneNumber, services, serviceAreas } from "@/lib/content";
+import {
+  emailAddress,
+  phoneNumber,
+  serviceHours,
+  services,
+  serviceAreas,
+  textNumber,
+  websiteUrl
+} from "@/lib/content";
 
 export function Footer() {
   return (
@@ -8,8 +17,14 @@ export function Footer() {
       <div className="container grid gap-10 py-14 md:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
-            <span className="grid h-12 w-12 place-items-center rounded-md bg-grove-500 text-lg font-black">
-              GP
+            <span className="rounded-md bg-white px-2 py-2">
+              <Image
+                src="/logo.png"
+                alt="Grove Plumbing logo"
+                width={146}
+                height={45}
+                className="h-8 w-auto"
+              />
             </span>
             <div>
               <p className="text-lg font-black">Grove Plumbing</p>
@@ -17,8 +32,11 @@ export function Footer() {
             </div>
           </div>
           <p className="mt-5 max-w-sm text-sm leading-7 text-grove-50">
-            Proposal demo for a warmer, clearer, and more lead-focused Grove
-            Plumbing website serving Ladner, Tsawwassen, and North Delta.
+            Trusted, practical service for homeowners across Ladner, Tsawwassen,
+            and North Delta.
+          </p>
+          <p className="mt-3 max-w-sm text-sm leading-7 text-grove-100">
+            {serviceHours}
           </p>
         </div>
         <div>
@@ -52,6 +70,14 @@ export function Footer() {
               <Mail className="mt-0.5 h-4 w-4" />
               {emailAddress}
             </a>
+            <a href={`sms:${textNumber.replace(/\D/g, "")}`} className="flex gap-2">
+              <MessageCircle className="mt-0.5 h-4 w-4" />
+              Text: {textNumber}
+            </a>
+            <a href={websiteUrl} className="flex gap-2">
+              <Globe className="mt-0.5 h-4 w-4" />
+              groveplumbing.ca
+            </a>
             <span className="flex gap-2">
               <MapPin className="mt-0.5 h-4 w-4" />
               Ladner, Tsawwassen, North Delta
@@ -61,7 +87,7 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10 py-5">
         <div className="container flex flex-col gap-2 text-xs text-grove-100 md:flex-row md:items-center md:justify-between">
-          <span>Copyright 2026 Grove Plumbing demo concept.</span>
+          <span>Copyright 2026 Grove Plumbing.</span>
           <span>Licensed and insured. Red Seal certified experience.</span>
         </div>
       </div>

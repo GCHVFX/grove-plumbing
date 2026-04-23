@@ -43,8 +43,8 @@ export function BookingFlow() {
         </div>
         <h2 className="mt-6 text-3xl font-black text-pipe">Request received</h2>
         <p className="mt-3 leading-7 text-slate-700">
-          Thanks, {name || "there"}. This demo would send the request to Grove so
-          the team can confirm your appointment shortly.
+          Thanks, {name || "there"}. Grove has your service request and will
+          follow up shortly to confirm appointment timing.
         </p>
         <div className="mt-6 grid gap-3 rounded-md bg-grove-50 p-5 text-sm text-slate-700">
           <p>

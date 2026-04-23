@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CtaBand } from "@/components/cta-band";
 import { SectionIntro } from "@/components/ui";
 import { trustSignals, whyGrove } from "@/lib/content";
@@ -10,12 +11,20 @@ export default function AboutPage() {
           <SectionIntro
             eyebrow="About Grove"
             title="A local plumbing company presented with the confidence it deserves"
-            body="This demo positions Grove as practical, friendly, licensed, and easy to call, while leaving room for the real family and team story to shine."
+            body="Grove Plumbing serves South Delta homeowners with practical advice, clean workmanship, and dependable communication from start to finish."
           />
-          <div className="aspect-[4/3] rounded-md bg-[linear-gradient(135deg,#dfeede,#ffffff,#bfdcbc)] p-6 shadow-soft">
-            <div className="flex h-full items-end rounded-md border border-white/70 p-6">
-              <p className="rounded-md bg-white px-4 py-3 font-black text-pipe shadow-sm">
-                Family or team photo
+          <div className="overflow-hidden rounded-md border border-grove-100 bg-white shadow-soft">
+            <div className="relative aspect-[4/3]">
+              <Image
+                src="/family.png"
+                alt="Grove Plumbing owner standing beside the service van"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-pipe/55 via-transparent to-transparent" />
+              <p className="absolute bottom-4 left-4 rounded-md bg-white/95 px-3 py-2 text-sm font-black text-pipe">
+                Family-owned and community-focused
               </p>
             </div>
           </div>

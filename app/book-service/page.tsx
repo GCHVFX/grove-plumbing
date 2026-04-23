@@ -9,7 +9,7 @@ export default function BookServicePage() {
           <SectionIntro
             eyebrow="Request service"
             title="Choose your preferred date and time"
-            body="Tell Grove what you need help with. This demo flow would collect the details, then the team would follow up to confirm your appointment shortly."
+            body="Tell Grove what you need help with, pick your preferred date and time window, and the team will follow up to confirm your appointment shortly."
           />
           <div className="mt-8 rounded-md border border-grove-100 bg-white p-5 shadow-sm">
             <p className="font-black text-pipe">What happens next?</p>

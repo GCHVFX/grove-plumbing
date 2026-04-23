@@ -8,9 +8,9 @@ import { StickyCallButton } from "@/components/sticky-call-button";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Grove Plumbing Demo",
+  title: "Grove Plumbing | Plumbing, Heating & Gas in South Delta",
   description:
-    "A proposal-quality redesign demo for Grove Plumbing in Ladner, Tsawwassen, and North Delta."
+    "Licensed and insured plumbing, heating, gas fitting, and drain cleaning for homes in Ladner, Tsawwassen, and North Delta."
 };
 
 export default function RootLayout({
